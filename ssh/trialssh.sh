@@ -14,13 +14,13 @@ LIGHT='\033[0;37m'
 #Getting user
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://raw.githubusercontent.com/nanotechidd/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/Hailey"
 exit 0
 fi
 clear
@@ -36,12 +36,12 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-Login=lizsvr-`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=HaileyKen-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 ws="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2| sed 's/ //g')"
 ws2="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2| sed 's/ //g')"
 cfn=$(cat /var/lib/akbarstorevpn/cfndomain)
-hari="1"
-Pass=1
+hari="7"
+Pass=123
 clear
 #systemctl restart ws-tls
 #systemctl restart ws-nontls
